@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alok Kumar Verma | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <span class="logo">Portfolio</span>
+      <ul class="nav-links">
+        <li><a href="#hero">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#responsibility">Responsibility</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <img src="./asset/profile.jpg" alt="Profile" class="profile-img" />
+      <div>
+        <h1>Alok Kumar Verma</h1>
+        <p>B.Tech in Computer Science</p>
+        <p>Ghaziabad, Uttar Pradesh, India</p>
+        <p>Email: <a href="mailto:alokverma5712@gmail.com">alokverma5712@gmail.com</a></p>
+        <div class="hero-links">
+          <a href="https://www.linkedin.com/in/alok-verma-162722259" target="_blank">LinkedIn</a>
+          <a href="https://github.com/AlokVerma89" target="_blank">GitHub</a>
+          <a href="./feedback.html" target="_blank">Get in touch</a
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>Languages: Java, C++, Python</li>
+      <li>Web Development, DBMS, OOPs, DSA, Machine Learning</li>
+      <li>Tools: IntelliJ, Dev C++, VS Code, Power BI</li>
+      <li>Technologies: Git, GitHub</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>ChatGPT Clone – AI-Powered Chat Application</h3>
+        <ul>
+          <li>Built with React.js, Node.js, OpenAI API</li>
+          <li>Responsive UI with real-time intelligent response</li>
+          <li><a href="">GitHub Repo</a> | <a href="https://chat-gpt-xi-three-98.vercel.app/">Live Demo</a></li>
+          
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Cryptographic Key Management</h3>
+        <ul>
+          <li>Buit with Python 3.8+, cryptography </li>
+          <li>This project is a secure Python-based Cryptographic Key Management System (KMS) that allows for the generation, storage, rotation, retrieval, and deletion of cryptographic keys. It is intended for educational and demonstration purposes.</li>
+          <li><a href="">GitHub Repo</a></li>
+          
+        </ul>
+      </div>
+      <!-- Add more project cards here if needed -->
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>B.Tech CS - 8.03 SGPA<br />Dr. A.P.J Abdul Kalam Technical University,Ghaziabad</li>
+      <li>Intermediate – 87.16%<br />D.A.V Sr. Sec. Public School,Bina,Sonbhadra</li>
+      <li>High School – 91.33%<br />D.A.V Sr. Sec. Public School,Bina,Sonbhadra</li>
+    </ul>
+  </section>
+
+  <section id="internships">
+    <h2>Internships & Training</h2>
+    <div class="card-grid">
+      <div class="card">
+        <p><strong>Foundations of Artificial Intelligence – Microsoft & AICTE</strong><br />
+          Gained foundational AI & ML knowledge, explored applications, and ethical practices
+        </p>
+        <p><a href="https://drive.google.com/file/d/1RvbaKb04XS_vAKJD0PnzxOwqmXsdBMp_/view?usp=drive_link">Certificate Link</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card-grid">
+     
+      <div class="card"><a href="https://drive.google.com/file/d/1zP5fIdXzz1teSOmIiG5eXeySnCVN4U_1/view?usp=drivesdk">Cisco Python Essentials</a></div>
+      <div class="card"><a href="https://drive.google.com/file/d/1MSXZsilvDdnP8qKckzAvXowr4APMSYig/view?usp=drive_link">TATA Data Visualization</a></div>
+      <div class="card"><a href="https://drive.google.com/file/d/1yrjlsZFsQRraMxlukS4saN1u3FWYX-u1/view?usp=drive_link">Cisco Programming in C++</a></div>
+      <div class="card"><a href="https://drive.google.com/file/d/1NOQUYMV1Jz8TpahR-hK8iCouivLpl8xq/view?usp=drive_link">Sql Intermediate</a></div>
+      <div class="card"><a href="https://drive.google.com/file/d/12BZcGwWCt94qeoGMkArHiGilRDt3WDgU/view?usp=drive_link">Accenture - Developer and TechnologyJob Simulation</a></div>
+    </div>
+  </section>
+
+  <section id="responsibility">
+    <h2>Responsibility & Coursework</h2>
+    <p><strong>Discipline Committee Member – Abes Engineering College</strong></p>
+    <p>Maintained event discipline, assisted in enforcing institutional rules</p>
+    <p><strong>Coursework:</strong> DSA, OOP, DBMS, OS, Software Engineering</p>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Alok Kumar Verma</p>
+      <button id="theme-toggle" class="theme-toggle">🌙 Dark Mode</button>
+    </div>
+  </footer>
+</body>
+
+<script>
+// Typing effect for hero section
+const heroTitle = document.querySelector('.hero-content h1');
+if (heroTitle) {
+  const text = heroTitle.textContent;
+  heroTitle.textContent = '';
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      heroTitle.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, 80);
+    }
+  }
+  type();
+}
+</script>
+
+</html>

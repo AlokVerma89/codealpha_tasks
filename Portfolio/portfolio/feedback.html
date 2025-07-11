@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <style>
+        *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(#e4f33c,#7ebfa6);
+    min-height: 100vh;
+    color: #232946;
+    overflow-x: hidden;
+}
+.contact-container{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    animation: fadeInUp 1.2s;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #a3cef133;
+    min-width: 350px;
+    max-width: 420px;
+    z-index: 2;
+    position: relative;
+}
+.contact-left-title h2{
+    font-weight: 700;
+    color: #3e6ff4;
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+    background: linear-gradient(90deg, #3e6ff4 40%, #a3cef1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    animation: fadeInName 1.2s;
+}
+@keyframes fadeInName {
+    from { opacity: 0; letter-spacing: 20px; }
+    to { opacity: 1; letter-spacing: 1.5px; }
+}
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #a3cef1;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #232946;
+    border-radius: 50px;
+    background: #f7faff;
+    box-shadow: 0 2px 8px #a3cef133;
+    font-size: 1rem;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.contact-left textarea{
+    height: 120px;
+    padding-top: 15px;
+    border-radius:20px;
+    resize: vertical;
+}
+.contact-inputs:focus{
+    border: 2px solid #3e6ff4;
+    box-shadow: 0 4px 16px #3e6ff433;
+}
+.contact-inputs::placeholder{
+    color:#a9a9a9;
+    font-size: 1rem;
+}
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    color: #fff;
+    gap:10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#3e6ff4,#a3cef1);
+    cursor: pointer;
+    box-shadow: 0 2px 8px #3e6ff433;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.contact-left button:hover{
+    background: linear-gradient(90deg,#a3cef1,#3e6ff4);
+    box-shadow: 0 4px 16px #3e6ff433;
+}
+.contact-left button img{
+    height: 28px;
+}
+.contact-right img{
+    width: 420px;
+    max-width: 90vw;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #a3cef133;
+    animation: floatImg 3s infinite ease-in-out alternate;
+}
+@keyframes floatImg {
+    from { transform: translateY(0); }
+    to { transform: translateY(-18px); }
+}
+.input-group {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+.input-group .contact-inputs {
+    padding-left: 48px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.input-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0.7;
+}
+.form-status {
+    min-height: 1.2em;
+    font-size: 1rem;
+    margin-top: 0.5em;
+    color: #3e6ff4;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+        padding: 2rem 0.5rem;
+    }
+    .contact-right img {
+        margin-top: 2rem;
+        width: 90vw;
+    }
+    .contact-left {
+        min-width: 0;
+        width: 100%;
+        max-width: 98vw;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" id="feedbackForm">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="af155e07-7eac-49ff-aac5-9097d0a5100d">
+            <div class="input-group">
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <span class="input-icon"><img src="https://img.icons8.com/ios-filled/24/3e6ff4/user.png"/></span>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <span class="input-icon"><img src="https://img.icons8.com/ios-filled/24/3e6ff4/new-post.png"/></span>
+            </div>
+            <div class="input-group">
+                <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+                <span class="input-icon"><img src="https://img.icons8.com/ios-filled/24/3e6ff4/speech-bubble.png"/></span>
+            </div>
+            <button type="submit">Submit <img src="./asset/arrow.png" height="10px" > </button>
+            <div id="form-status" class="form-status"></div>
+        </form>
+        <div class="contact-right">
+            <img src="./asset/right_img1.png">
+        </div>
+
+    </div>
+    <script src="feedback.js"></script>
+</body>
+</html>
